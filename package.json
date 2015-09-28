@@ -1,7 +1,7 @@
 {
   "name": "react-native-android-iconify",
   "version": "1.0.0",
-  "description": "react native lib for icons in android",
+  "description": "icons for react native android using android-iconify",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
