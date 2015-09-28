@@ -47,7 +47,9 @@ public class ReactIconifyPackage implements ReactPackage {
                 .with(new IoniconsModule());
 
         return Arrays.<ViewManager>asList(
-                new ReactIconTextViewManager()
+                new ReactIconTextViewManager(),
+                new ReactIconButtonViewManager(),
+                new ReactIconToggleButtonViewManager()
         );
     }
 }

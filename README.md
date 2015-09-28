@@ -1,5 +1,5 @@
 # react-native-android-iconify
-icons for react native android using android-iconify
+icons for react-native android using [android-iconify](https://github.com/JoanZapata/android-iconify)
 
 ## Installation and How to use
 
@@ -101,7 +101,7 @@ AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
 - [android-iconify](https://github.com/JoanZapata/android-iconify)
 
 ## Notes
-- only IconTextView was implemented so far, will implement the other widgets shortly
+- IconTextView, IconButton and IconToggleButton are implemented
 - all available icon modules of [android-iconify](https://github.com/JoanZapata/android-iconify) were included
 - as seen above font size and color are controlled by css, all other features of [android-iconify](https://github.com/JoanZapata/android-iconify) remain the same
 - Please report any issues or send patches to get fixes in
