@@ -22,6 +22,7 @@ import java.util.List;
  */
 public class ReactIconTextViewManager extends SimpleViewManager<IconTextView> {
     public static final String REACT_CLASS = "RCTIconTextView";
+
     @UIProp(UIProp.Type.STRING)
     public static final String PROP_ICON = "text";
     @UIProp(UIProp.Type.STRING)
@@ -57,12 +58,6 @@ public class ReactIconTextViewManager extends SimpleViewManager<IconTextView> {
         }
         Log.i("IconTextView", "updateview finish");
         super.updateView(view, props);
-    }
-
-    @Override
-    public void updateExtraData(IconTextView view, Object extraData) {
-        Log.i("IconTextView", "update extra data has icon");
-//        view.setText((CharSequence) extraData);
     }
 
     @Override
