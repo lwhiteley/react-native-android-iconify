@@ -1,0 +1,29 @@
+{
+  "name": "react-native-android-iconify",
+  "version": "1.0.0",
+  "description": "react native lib for icons in android",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lwhiteley/react-native-android-iconify.git"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "icons",
+    "icon",
+    "iconify",
+    "android",
+    "mobile",
+    "native"
+  ],
+  "author": "Layton Whiteley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lwhiteley/react-native-android-iconify/issues"
+  },
+  "homepage": "https://github.com/lwhiteley/react-native-android-iconify#readme"
+}

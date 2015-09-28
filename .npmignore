@@ -22,10 +22,6 @@ coverage
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
-# Dependency directory
-# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
-node_modules
-
 # OSX
 #
 .DS_Store
@@ -50,9 +46,7 @@ DerivedData
 *.xcuserstate
 project.xcworkspace
 android/.gradle/
-# node.js
-#
-node_modules/
+
 npm-debug.log
 *.iml
 .idea
@@ -71,5 +65,4 @@ gradlew.bat
 # Ignore Gradle GUI config
 gradle-app.setting
 
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
+tmp
