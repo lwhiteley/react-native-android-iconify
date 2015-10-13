@@ -23,6 +23,17 @@ import java.util.List;
  * Created by layton on 9/27/15.
  */
 public class ReactIconifyPackage implements ReactPackage {
+    public ReactIconifyPackage() {
+        Iconify.with(new FontAwesomeModule())
+                .with(new EntypoModule())
+                .with(new TypiconsModule())
+                .with(new MaterialModule())
+                .with(new MeteoconsModule())
+                .with(new WeathericonsModule())
+                .with(new SimpleLineIconsModule())
+                .with(new IoniconsModule());
+    }
+
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         return Collections.emptyList();
@@ -35,17 +46,6 @@ public class ReactIconifyPackage implements ReactPackage {
 
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
-
-        Iconify
-                .with(new FontAwesomeModule())
-                .with(new EntypoModule())
-                .with(new TypiconsModule())
-                .with(new MaterialModule())
-                .with(new MeteoconsModule())
-                .with(new WeathericonsModule())
-                .with(new SimpleLineIconsModule())
-                .with(new IoniconsModule());
-
         return Arrays.<ViewManager>asList(
                 new ReactIconTextViewManager()
         );

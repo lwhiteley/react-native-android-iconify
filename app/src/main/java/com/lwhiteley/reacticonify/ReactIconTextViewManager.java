@@ -51,7 +51,7 @@ public class ReactIconTextViewManager extends SimpleViewManager<IconTextView> {
             view.setText(props.getString(PROP_ICON));
         }
         if (props.hasKey(PROP_COLOR)) {
-            view.setTextColor(Color.parseColor(props.getString(PROP_COLOR)));
+            view.setTextColor(props.getInt(PROP_COLOR,0));
         }
         if (props.hasKey(PROP_SIZE)) {
             view.setTextSize(props.getFloat(PROP_SIZE, 0.0f));
