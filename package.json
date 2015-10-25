@@ -1,6 +1,6 @@
 {
   "name": "react-native-android-iconify",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "icons for react native android using android-iconify",
   "main": "index.js",
   "scripts": {
