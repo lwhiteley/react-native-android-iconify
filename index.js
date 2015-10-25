@@ -5,6 +5,11 @@ var iface = {
         name: 'IconTextView',
         propTypes: {
             text: PropTypes.string,
+            scaleX: PropTypes.number,
+            scaleY: PropTypes.number,
+            translateX: PropTypes.number,
+            translateY: PropTypes.number,
+            rotation: PropTypes.number
         },
     }
 };
