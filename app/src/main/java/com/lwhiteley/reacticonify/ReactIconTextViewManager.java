@@ -1,21 +1,14 @@
 package com.lwhiteley.reacticonify;
 
-import android.graphics.Color;
 import android.util.Log;
 
-import com.facebook.react.bridge.ReactApplicationContext;
-import com.facebook.react.uimanager.BaseViewPropertyApplicator;
-import com.facebook.react.uimanager.CatalystStylesDiffMap;
+import com.facebook.react.uimanager.ReactProp;
 import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
-import com.facebook.react.uimanager.UIProp;
-import com.facebook.react.uimanager.ViewManager;
-import com.facebook.react.views.text.ReactTextShadowNode;
-import com.joanzapata.iconify.fonts.FontAwesomeIcons;
+import com.facebook.react.uimanager.ViewProps;
 import com.joanzapata.iconify.widget.IconTextView;
 
-import java.util.Arrays;
-import java.util.List;
+import javax.annotation.Nullable;
 
 /**
  * Created by layton on 9/27/15.
@@ -23,12 +16,8 @@ import java.util.List;
 public class ReactIconTextViewManager extends SimpleViewManager<IconTextView> {
     public static final String REACT_CLASS = "RCTIconTextView";
 
-    @UIProp(UIProp.Type.STRING)
     public static final String PROP_ICON = "text";
-    @UIProp(UIProp.Type.STRING)
     public static final String PROP_COLOR = "color";
-    @UIProp(UIProp.Type.STRING)
-    public static final String PROP_SIZE = "fontSize";
 
     @Override
     public String getName() {
@@ -41,27 +30,23 @@ public class ReactIconTextViewManager extends SimpleViewManager<IconTextView> {
         return new IconTextView(context);
     }
 
-    @Override
-    public void updateView(final IconTextView view,
-                           final CatalystStylesDiffMap props) {
 
-        BaseViewPropertyApplicator.applyCommonViewProperties(view, props);
-        if (props.hasKey(PROP_ICON)) {
-            Log.i("IconTextView", "update view has icon");
-            view.setText(props.getString(PROP_ICON));
-        }
-        if (props.hasKey(PROP_COLOR)) {
-            view.setTextColor(props.getInt(PROP_COLOR,0));
-        }
-        if (props.hasKey(PROP_SIZE)) {
-            view.setTextSize(props.getFloat(PROP_SIZE, 0.0f));
-        }
-        Log.i("IconTextView", "updateview finish");
-        super.updateView(view, props);
+    @ReactProp(name = ViewProps.FONT_SIZE, defaultInt = 0)
+    public void setTextSize(IconTextView view, Integer size) {
+        Log.i("IconTextView", "setTextSize: "+ size + " | " + ViewProps.FONT_SIZE);
+        view.setTextSize(size);
     }
 
-    @Override
-    public ReactTextShadowNode createCSSNodeInstance() {
-        return new ReactTextShadowNode(false);
+    @ReactProp(name = PROP_ICON)
+    public void setText(IconTextView view, @Nullable String text) {
+        Log.i("IconTextView", "setText: "+ text);
+        view.setText(text);
     }
+
+    @ReactProp(name = PROP_COLOR, customType = "Color")
+    public void setTextColor(IconTextView view, @Nullable Integer color) {
+        Log.i("IconTextView", "setTextColor: " + color );
+        view.setTextColor(color);
+    }
+
 }

@@ -82,6 +82,8 @@ var AwesomeProject = React.createClass({
 
 var styles = StyleSheet.create({
   icon: {
+    width:40,
+    height:40,
     fontSize:40,
     color:'#0066FF',
   },
