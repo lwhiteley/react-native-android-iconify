@@ -1,4 +1,5 @@
-var { requireNativeComponent, PropTypes } = require('react-native');
+import React, { PropTypes } from 'react';
+import { requireNativeComponent } from 'react-native';
 
 var iface = {
     'IconTextView':{
